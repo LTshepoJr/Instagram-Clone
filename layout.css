@@ -1,0 +1,23 @@
+.profile > * {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.profile-user-settings {
+    justify-content: space-around;
+}
+
+.profile-stats {
+    justify-content: space-around;
+}
+
+main > .container > .gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:repeat(auto-fit, minmax(400px, 1fr));
+    gap: 5px;
+}
+
+
+

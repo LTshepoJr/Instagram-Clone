@@ -1,7 +1,9 @@
 /* Base Styles */
 
 :root {
-    font-size: 10px;
+    --normal-paragragh: 20px;
+    --greyish-color: rgba(32, 27, 27, 0.411);
+    --font-type: Roboto, sans-serif;
 }
 
 *,
@@ -10,14 +12,91 @@
     box-sizing: border-box;
 }
 
-body {
+.headings {
+    text-align: center;
+    text-decoration: underline;
+}
+
+body , html {
     font-family: "Open Sans", Arial, sans-serif;
     min-height: 100vh;
-    background-color: #fafafa;
-    color: #262626;
+    background: linear-gradient(black, var(--greyish-color));
+    color: #ffffff;
     padding-bottom: 3rem;
+    margin: 0;
 }
 
 img {
     display: block;
+    width: 400px;
+    height: 400px;
+}
+
+.profile > * {
+    justify-content: center;
+}
+
+.profile-bio {
+    border-bottom: 3px solid var(--greyish-color);
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: var(--normal-paragragh);
+    border-radius: 10%;
+    background: linear-gradient(45deg, #B4B3B5ff 0%, #6A9A8Eff 100%);
+    transition: all 0.7s ease-out;
+    font-family: var(--font-type);
+    color: black;
+    opacity: 100%;
+}
+
+.profile-settings-btn {
+    background-color: var(--greyish-color);
+    border-radius: 5%;
+}
+
+.profile-real-name {
+    font-size: var(--normal-paragragh);
+}
+
+.gallery-item-likes {
+    color: red;
+}
+
+.gallery-item-comments {
+    color: rgb(50, 50, 230);
+}
+
+.btn:hover {
+    color: white;
+    opacity: 75%;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgb(3, 1, 5) 0%, rgb(173, 5, 5) 100%);
+}
+
+.visually-hidden {
+    opacity: 35%;
+    transition: all 0.3s ease-in-out;
+}
+
+.visually-hidden:hover {
+    opacity: 100%;
+    font-size: 1.5em;
+}
+
+.profile-stat-count {
+
+    animation: grow 0.8s ease-in-out 0s infinite alternate;
+}
+
+@keyframes grow {
+    0% {    text-shadow: 0px 0px 0px white, 
+        -0px -0px 0px white;}
+    25% {    text-shadow: 2px 2px 4px white, 
+        -2px -2px 4px white;}
+    50% {    text-shadow: 3px 3px 4px white, 
+        -3px -3px 4px white;}
+    100% {    text-shadow: 4px 4px 4px white, 
+        -4px -4px 4px white;}
 }
