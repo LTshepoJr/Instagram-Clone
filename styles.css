@@ -4,6 +4,7 @@
     --normal-paragragh: 20px;
     --greyish-color: rgba(32, 27, 27, 0.411);
     --font-type: Roboto, sans-serif;
+    --font-multiplier: 1.5em;
 }
 
 *,
@@ -38,13 +39,14 @@ img {
 
 .profile-bio {
     border-bottom: 3px solid var(--greyish-color);
+    font-size: var(--normal-paragragh);
 }
 
 .btn {
     padding: 10px 20px;
     font-size: var(--normal-paragragh);
     border-radius: 10%;
-    background: linear-gradient(45deg, #B4B3B5ff 0%, #6A9A8Eff 100%);
+    background: linear-gradient(45deg, rgb(179, 179, 181) 0%, #6A9A8Eff 100%);
     transition: all 0.7s ease-out;
     font-family: var(--font-type);
     color: black;
@@ -52,12 +54,12 @@ img {
 }
 
 .profile-settings-btn {
-    background-color: var(--greyish-color);
     border-radius: 5%;
 }
 
 .profile-real-name {
-    font-size: var(--normal-paragragh);
+    font-size: var(--font-multiplier);
+    color: #D76332ff;
 }
 
 .gallery-item-likes {
@@ -82,7 +84,7 @@ img {
 
 .visually-hidden:hover {
     opacity: 100%;
-    font-size: 1.5em;
+    font-size: var(--font-multiplier);
 }
 
 .profile-stat-count {
@@ -99,4 +101,12 @@ img {
         -3px -3px 4px white;}
     100% {    text-shadow: 4px 4px 4px white, 
         -4px -4px 4px white;}
+}
+
+.profile-stats {
+    font-size: var(--font-multiplier);
+}
+
+.profile-bio {
+    font-size: var(--normal-paragragh);
 }
